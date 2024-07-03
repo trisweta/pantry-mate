@@ -1,0 +1,94 @@
+### Register User
+POST http://localhost:3000/api/v1/users/register
+Content-Type: application/json
+
+{
+  "username": "test2",
+  "email": "test2@gmail.com",
+  "password": "testpassword"
+}
+
+### Login User
+POST http://localhost:3000/api/v1/users/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+### Get all recipes
+GET http://localhost:3000/api/v1/recipe/
+Accept: application/json
+
+### Create a new recipe
+POST http://localhost:3000/api/v1/recipe/create
+Content-Type: application/json
+
+{
+  "name": "Spaghetti Carbonara",
+  "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+  "ingredients": [
+    "200g spaghetti",
+    "100g pancetta",
+    "2 large eggs",
+    "50g Parmesan cheese",
+    "Salt and pepper"
+  ],
+  "instructions": "1. Cook the spaghetti according to package instructions. 2. In a pan, cook the pancetta until crispy. 3. In a bowl, mix eggs and Parmesan cheese. 4. Combine spaghetti with pancetta and remove from heat. 5. Stir in egg mixture quickly to create a creamy sauce. 6. Season with salt and pepper.",
+  "recipeImg": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.allrecipes.com%2Frecipe%2F11973%2Fspaghetti-carbonara-ii%2F&psig=AOvVaw32-2gV5PMWDkYdWcLQIJzW&ust=1719763374160000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCuwv6XgYcDFQAAAAAdAAAAABAE",
+  "cookingTime": 20,
+  "userOwner": "66800f93c7fb00359643d85d" 
+}
+
+### Save a recipe
+PUT http://localhost:3000/api/v1/recipe/save
+Content-Type: application/json
+
+{
+  "recipeId": "66815ce450b686fca4a91d31", 
+  "userId": "66804ec6ce53fddc4b7eba0a" 
+}
+
+### Get IDs of saved recipes for a user
+GET http://localhost:3000/api/v1/recipe/savedRecipes/ids/66804ec6ce53fddc4b7eba0a
+
+
+### Get saved recipes for a user
+GET http://localhost:3000/api/v1/recipe/savedRecipes/66802e5cc769bd6b9aeb842e
+
+
+### Get recipes created by a user
+GET http://localhost:3000/api/v1/recipe/userRecipes/66802e5cc769bd6b9aeb842e
+
+### Get a recipe by ID
+GET http://localhost:3000/api/v1/recipe/66805042ce53fddc4b7eba61
+
+
+### Delete a recipe by ID
+DELETE http://localhost:3000/api/v1/recipe/delete/66805042ce53fddc4b7eba61
+
+
+### Update a recipe by ID
+PUT http://localhost:3000/api/v1/recipe/update/668050a3ce53fddc4b7eba71
+Content-Type: application/json
+
+{
+  "name": "Updated Spaghetti Carbonara",
+  "description": "An updated version of the classic Italian pasta dish.",
+  "ingredients": [
+    "200g spaghetti",
+    "100g pancetta",
+    "2 large eggs",
+    "60g Parmesan cheese",
+    "Salt and pepper"
+  ],
+  "instructions": "1. Cook the spaghetti according to package instructions. 2. In a pan, cook the pancetta until crispy. 3. In a bowl, mix eggs and Parmesan cheese. 4. Combine spaghetti with pancetta and remove from heat. 5. Stir in egg mixture quickly to create a creamy sauce. 6. Season with salt and pepper.",
+  "recipeImg": "/assets/spaghetti-carbonara-updated.jpg",
+  "cookingTime": 25,
+  "userOwner": "64a1b2c3d4e5f67890123456" 
+}
+
+### Remove a saved recipe from user
+PUT http://localhost:3000/api/v1/recipe/removeSaved/66803189560c87e693d4c8f5/66802e5cc769bd6b9aeb842e
+
