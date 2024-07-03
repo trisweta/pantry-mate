@@ -77,6 +77,8 @@ Make sure you have the following installed:
 
 ![image](https://github.com/trisweta/pantry-mate/assets/92795084/4d4b7392-a993-4322-9d33-be10e87dffed)
 
+![image](https://github.com/trisweta/pantry-mate/assets/92795084/a569cb8c-cd63-4bef-973e-fa3ad49f2162)
+
 ![image](https://github.com/trisweta/pantry-mate/assets/92795084/f933ed81-3076-4879-bc92-8f5eac134285)
 
 ![image](https://github.com/trisweta/pantry-mate/assets/92795084/63a9250d-f809-4e06-91e3-3c707e5816c7)
